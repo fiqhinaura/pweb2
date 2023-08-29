@@ -38,7 +38,7 @@ $db= new database;
             <td><?php echo $x['nama'] ?></td>
             <td><?php echo $x['alamat'] ?></td>
             <td>
-                <a href="edit_mhs.php?id=<?php echo $id['npm'];?> &aksi=edit">Edit</a>
+                <a href="edit_mhs.php?id=<?php echo $x['npm'];?>&aksi=edit">Edit</a>
                 <a href="hapus_mhs.php">Hapus</a>
             </td>
         </tr>

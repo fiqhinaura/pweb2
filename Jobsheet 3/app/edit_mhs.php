@@ -13,7 +13,7 @@ $db= new database();
         <tr>
             <td>NIM</td>
             <td>
-                <input type="hidden" name="id" value="<?php echo $d['id']?>"></td>
+                <input type="hidden" name="id" value="<?php echo $d['npm']?>">
                 <input type="text" name="npm" value="<?php echo $d['npm']?>"></td>
         </tr>
         <tr>
