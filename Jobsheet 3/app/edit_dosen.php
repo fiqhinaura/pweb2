@@ -18,27 +18,28 @@ $db= new database();
 <div class="col-sm-5 py-2 mx-auto">
 <div class="container-fluid">
 
-<h3>Edit Data Mahasiswa</h3>
-<form action="proses_mhs.php?aksi=update" method="post">
+<h3>Edit Data Dosen</h3>
+<form action="proses_dosen.php?aksi=update" method="post">
     <?php
     //membuat perulangan
-    foreach($db->edit($_GET['id']) as $d) {
+    foreach($db->edit_dosen($_GET['id']) as $d) {
         ?>
+
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">NIM</label>
-        <input type="hidden" name="id" value="<?php echo $d['npm']?>">
-        <input type="text" class="form-control" name="npm" value="<?php echo $d['npm']?>">
-        <div id="npm" class="form-text"></div>
+        <label for="exampleInputEmail1" class="form-label">NIDN</label>
+        <input type="hidden" name="id" value="<?php echo $d['id']?>">
+        <input type="text" class="form-control" name="nidn" value="<?php echo $d['nidn']?>">
+        <div id="nidn" class="form-text"></div>
     </div>
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Nama</label>
+        <label for="nama" class="form-label">Nama</label>
         <input type="text" class="form-control" name="nama" value="<?php echo $d['nama']?>">
         <div id="nama" class="form-text"></div>
     </div>
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Alamat</label>
-        <textarea type="text" class="form-control" name="alamat" cols="30" rows="5" ><?php echo $d['alamat']?></textarea>
-        <div id="alamat" class="form-text"></div>
+        <label for="exampleInputEmail1" class="form-label">Prodi</label>
+        <input type="text" class="form-control" name="prodi" value="<?php echo $d['prodi']?>">
+        <div id="prodi" class="form-text"></div>
     </div>
     <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label"></label>
