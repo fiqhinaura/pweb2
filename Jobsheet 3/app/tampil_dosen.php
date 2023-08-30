@@ -20,7 +20,7 @@ $db= new database;
 <div class="col-sm-5 py-2 mx-auto">
 <div class="container-fluid">
 <h3>Data Dosen</h3>
-<a href="input_dosen.php" class="btn btn-success">Tambah Dosen</a>
+<a href="input_dosen.php" class="btn btn-primary">Tambah Dosen</a>
 <br>
 <br>
 <table class="table table-striped table-sm">

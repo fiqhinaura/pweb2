@@ -20,7 +20,7 @@ $db= new database;
 <div class="col-sm-5 py-2 mx-auto">
 <div class="container-fluid">
 <h3>Data Mahasiswa</h3>
-<a href="input_mhs.php" class="btn btn-success">Tambah Mahasiswa</a>
+<a href="input_mhs.php" class="btn btn-primary">Tambah Mahasiswa</a>
 <br>
 <br>
 <!-- <div class="d-flex justify-content-center"> -->
