@@ -7,6 +7,7 @@ $database= new database ();
 $db = $database->getKoneksi();
 
 if (isset($_POST['submit'])){
+    $nidn = $_POST['id'];
     $nidn = $_POST['nidn'];
     $nama = $_POST['nama'];
     $prodi = $_POST['prodi'];

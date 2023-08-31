@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,13 +15,12 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
    crossorigin="anonymous"></script>
-    <?php
-    include '../../header.html';
-    ?>
+    --->
     <?php
     //memanggil class model database
     include_once '../../config.php';
     include_once '../../controllers/MahasiswaController.php';
+    require '../../index.php';
 
     //instansiasi class database
     $database = new database;
@@ -40,7 +39,6 @@
             <a href="tambah.php" class="btn btn-primary">Tambah Mahasiswa</a>
             <br>
             <br>
-            <!-- <div class="d-flex justify-content-center"> -->
             <table class="table table-striped table-sm">
                 <tr>
                     <th>No</th>
