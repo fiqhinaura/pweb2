@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Mahasiswa</title>
+    <title>Data Dosen</title>
     <link rel="stylesheet" href="../public/assets/css/bootstrap.min.css">
     <script src="../public/assets/js/bootstrap.min.js"></script>
 </head>
@@ -20,6 +20,16 @@ $db= new database;
 <div class="col-sm-5 py-2 mx-auto">
 <div class="container-fluid">
 <h3>Data Dosen</h3>
+
+<?php
+//memeriksa apakah ada status success dari URL contoh saat input
+if (isset($_GET['status']) && $_GET['status'] === 'success') 
+?>
+<div class="alert alert-success" id="success-alert" role="alert">
+Berhasil Menambahkan Data
+</div>
+<?php 
+?>
 <a href="input_dosen.php" class="btn btn-primary">Tambah Dosen</a>
 <br>
 <br>

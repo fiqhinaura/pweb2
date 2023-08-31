@@ -24,7 +24,7 @@ $db= new database;
 <br>
 <br>
 <!-- <div class="d-flex justify-content-center"> -->
-<table class="table table-striped table-sm">
+<table class="table table-striped table-lg">
     <tr>
         <th>No</th>
         <th>NIM</th>

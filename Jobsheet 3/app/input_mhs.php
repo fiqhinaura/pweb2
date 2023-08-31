@@ -17,17 +17,17 @@ include'header.html';
 <form action="proses_mhs.php?aksi=tambah" method="post">
 <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">NIM</label>
-    <input type="text" class="form-control" name="npm" id="npm" aria-describedby="emailHelp">
+    <input type="text" class="form-control" name="npm" id="npm" aria-describedby="emailHelp" required>
     <div id="npm" class="form-text"></div>
   </div>
 <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Nama</label>
-    <input type="text" class="form-control" name="nama" id="nama" aria-describedby="emailHelp">
+    <input type="text" class="form-control" name="nama" id="nama" aria-describedby="emailHelp" required>
     <div id="nama" class="form-text"></div>
   </div>
   <div class="mb-3">
   <label for="alamat" class="form-label">Alamat</label>
-  <textarea class="form-control" id="alamat" name="alamat" rows="3"></textarea>
+  <textarea class="form-control" id="alamat" name="alamat" rows="3" required></textarea>
 </div>
 <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label"></label>

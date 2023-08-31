@@ -34,6 +34,20 @@ include'header.html';
     <label for="exampleInputEmail1" class="form-label"></label>
     <input type="submit" class="btn btn-primary"value = "Simpan">
   </div>
+  <script>
+    //memanggil status alert
+    var alertStatus = sessionStorage.getItem('alertStatus');
+
+    //fungsi method untuk menampilkan alert
+    function showAlert(){
+      var myAlert = document.getElementById('success-alert');
+      if (alertStatus==='true'){
+        myAlert.style.display = 'block';
+      }
+    }
+    //memanggil fungsi untuk nampilin alert saat halaman dimuat
+    showAlert();
+  </script>
 </form>
 </body>
 </html>
