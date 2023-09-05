@@ -1,0 +1,1 @@
+SELECT mata_kuliah.id_matkul, mata_kuliah.nama_matkul, mahasiswa.nama, dosen.nama FROM mata_kuliah JOIN mahasiswa, dosen WHERE mata_kuliah.npm=mahasiswa.npm AND mata_kuliah.id_dosen=dosen.id
