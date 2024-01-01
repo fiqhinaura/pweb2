@@ -33,12 +33,12 @@
 
 
     ?>
+  <form action="" method="post">
     <div class="col-sm-8 py-2 mx-auto">
         <div class="container-fluid">
             <h3>Data Matakuliah</h3>
             <a href="tambah.php" class="btn btn-primary">Tambah Matakuliah</a>
-            <br>
-            <br>
+            <br><br>
             <table class="table table-striped table-sm">
                 <tr>
                     <th>No</th>
@@ -56,19 +56,21 @@
                         <td><?php echo $no++ ?></td>
                         <td><?php echo $x['id_matkul'] ?></td>
                         <td><?php echo $x['nama_matkul'] ?></td>
-                        <td><?php echo $x['nama_mhs'] ?></td>
-                        <td><?php echo $x['nama_dsn'] ?></td>
+                        <td><?php echo $x['nama_mhs'] ?></td> <!-- Adjust the column name -->
+                        <td><?php echo $x['nama_dsn'] ?></td> <!-- Adjust the column name -->
                         <td>
                             <a class="btn btn-warning" href="edit.php?npm=<?php echo $x['id_matkul']; ?>">Edit</a>
-                            <a class="btn btn-danger" href="hapus.php?id=<?php echo $x['id_matkul']; ?>"
-                            onclick="return confirm ('Apakah yakin akan menghapus..?')">Hapus</a>
+                            <a class="btn btn-danger" href="hapus.php?id_matkul=<?php echo $x['id_matkul']; ?>"
+                               onclick="return confirm ('Apakah yakin akan menghapus..?')">Hapus</a>
                         </td>
                     </tr>
-        </div>
-    <?php
+                <?php
                 }
-    ?>
-    </table>
+                ?>
+            </table>
+        </div>
+    </div>
+</form>
 </body>
 
 </html>

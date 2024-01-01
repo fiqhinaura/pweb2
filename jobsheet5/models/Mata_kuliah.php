@@ -11,11 +11,13 @@ class Matakuliah{
 
     public function getAllMatakuliah()
     {
-        $query="SELECT mata_kuliah.id_matkul, mata_kuliah.nama_matkul, mahasiswa.nama, dosen.nama FROM mata_kuliah JOIN mahasiswa, dosen WHERE mata_kuliah.id_matkul=mahasiswa.npm AND mata_kuliah.id_dosen=dosen.id";
-        $result=mysqli_query($this->koneksi, $query);
+        $query = "SELECT mata_kuliah.id_matkul, mata_kuliah.nama_matkul, mahasiswa.nama AS nama_mhs, dosen.nama AS nama_dsn FROM mata_kuliah
+                JOIN mahasiswa ON mata_kuliah.npm = mahasiswa.npm
+                 JOIN dosen ON mata_kuliah.id_dosen = dosen.id";
+        $result = mysqli_query($this->koneksi, $query);
         return $result;
     }
-    
+
     public function createMatakuliah($id_matkul, $nama_matkul, $npm, $id){
         $query="INSERT INTO mata_kuliah (id_matkul, nama_matkul, npm, id) 
         VALUES('$id_matkul', '$nama_matkul', '$npm', '$id')";
