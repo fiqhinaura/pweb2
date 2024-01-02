@@ -4,7 +4,7 @@ require '../../index.php';
 <div class="col-sm-5 py-2 mx-auto">
 <div class="container-fluid">
 <h3>Tambah Data Mahasiswa</h3>
-<form action="proses_tambah.php" method="post">
+<form action="proses_tambah" method="post">
 <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">NIM</label>
     <input type="text" class="form-control" name="npm" id="npm" aria-describedby="emailHelp">

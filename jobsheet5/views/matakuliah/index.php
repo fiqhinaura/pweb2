@@ -46,7 +46,7 @@
                     <th>Nama Matkul</th>
                     <th>Nama Mahasiswa</th>
                     <th>Nama Dosen</th>
-                    <th>Aksi</th>
+                    
                 </tr>
                 <?php
                 $no = 1;
@@ -58,11 +58,7 @@
                         <td><?php echo $x['nama_matkul'] ?></td>
                         <td><?php echo $x['nama_mhs'] ?></td> <!-- Adjust the column name -->
                         <td><?php echo $x['nama_dsn'] ?></td> <!-- Adjust the column name -->
-                        <td>
-                            <a class="btn btn-warning" href="edit.php?npm=<?php echo $x['id_matkul']; ?>">Edit</a>
-                            <a class="btn btn-danger" href="hapus.php?id_matkul=<?php echo $x['id_matkul']; ?>"
-                               onclick="return confirm ('Apakah yakin akan menghapus..?')">Hapus</a>
-                        </td>
+                        
                     </tr>
                 <?php
                 }

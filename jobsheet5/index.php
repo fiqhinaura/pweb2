@@ -19,16 +19,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="http://localhost/pweb2/jobsheet5/">Home</a>
+          <a class="nav-link active" aria-current="page" href=home>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost/pweb2/jobsheet5/views/mahasiswa/index.php">Mahasiswa</a>
+          <a class="nav-link" href=mahasiswa>Mahasiswa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost/pweb2/jobsheet5/views/dosen/index.php">Dosen</a>
+          <a class="nav-link" href=dosen>Dosen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost/pweb2/jobsheet5/views/matakuliah/index.php">Matakuliah</a>
+          <a class="nav-link" href=matakuliah>Matakuliah</a>
         </li>
       </ul>
       <form class="d-flex" role="search">

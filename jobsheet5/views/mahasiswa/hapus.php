@@ -13,7 +13,7 @@ if (isset($_GET['id'])){
     $result = $mahasiswaController->deleteMahasiswa($id);
 
     if ($result){
-        header("location:index.php");
+        header("location:/pweb2/jobsheet5/mahasiswa");
     }else {
         echo "Gagal menghapus data";
     }

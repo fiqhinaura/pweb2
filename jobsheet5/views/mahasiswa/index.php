@@ -36,7 +36,7 @@
     <div class="col-sm-8 py-2 mx-auto">
         <div class="container-fluid">
             <h3>Data Mahasiswa</h3>
-            <a href="tambah.php" class="btn btn-primary">Tambah Mahasiswa</a>
+            <a href="tambah" class="btn btn-primary">Tambah Mahasiswa</a>
             <br>
             <br>
             <table class="table table-striped table-sm">
@@ -65,8 +65,8 @@
                         <td><?php echo $x['agama'] ?></td>
                         <td><?php echo $x['alamat'] ?></td>
                         <td>
-                            <a class="btn btn-warning" href="edit.php?npm=<?php echo $x['npm']; ?>">Edit</a>
-                            <a class="btn btn-danger" href="hapus.php?id=<?php echo $x['npm']; ?>"
+                            <a class="btn btn-warning" href="edit/<?php echo $x['npm']; ?>">Edit</a>
+                            <a class="btn btn-danger" href="hapus/<?php echo $x['npm']; ?>"
                             onclick="return confirm ('Apakah yakin akan menghapus..?')">Hapus</a>
                         </td>
                     </tr>

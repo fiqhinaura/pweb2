@@ -15,7 +15,7 @@ if (isset($_POST['submit'])){
     $result=$dosenController->createDosen($id, $nidn, $nama, $prodi);
 
     if($result){
-        header("location:index.php");
+        header("location:/pweb2/jobsheet5/dosen");
     }else{
         header("location:tambah.php");
     }

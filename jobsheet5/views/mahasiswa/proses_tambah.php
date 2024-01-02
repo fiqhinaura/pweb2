@@ -19,7 +19,7 @@ if (isset($_POST['submit'])){
     $result=$mahasiswaController->createMahasiswa($npm, $nama, $tempat_lahir, $jenis_kelamin, $agama, $alamat);
 
     if($result){
-        header("location:index.php");
+        header("location:/pweb2/jobsheet5/mahasiswa");
     }else{
         header("location:tambah.php");
     }

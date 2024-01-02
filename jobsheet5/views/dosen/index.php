@@ -18,7 +18,7 @@
     <div class="col-sm-8 py-2 mx-auto">
         <div class="container-fluid">
             <h3>Data Dosen</h3>
-            <a href="tambah.php" class="btn btn-primary">Tambah Dosen</a>
+            <a href="tambah_dsn" class="btn btn-primary">Tambah Dosen</a>
             <br>
             <br>
             <!-- <div class="d-flex justify-content-center"> -->
@@ -40,8 +40,8 @@
                         <td><?php echo $x['nama'] ?></td>
                         <td><?php echo $x['prodi'] ?></td>
                         <td>
-                            <a class="btn btn-warning" href="edit.php?id=<?php echo $x['id']; ?>">Edit</a>
-                            <a class="btn btn-danger" href="hapus.php?id=<?php echo $x['id']; ?>"
+                            <a class="btn btn-warning" href="edit_dsn/<?php echo $x['id']; ?>">Edit</a>
+                            <a class="btn btn-danger" href="hapus_dsn/<?php echo $x['id']; ?>"
                             onclick="return confirm ('Apakah yakin akan menghapus..?')">Hapus</a>
                         </td>
                     </tr>

@@ -28,7 +28,7 @@ if (isset($_GET['npm'])){
             $result = $mahasiswaController->updateMahasiswa($npm, $nama, $tempat_lahir, $jenis_kelamin, $agama, $alamat);
             
             if($result){
-                header("location:index.php");
+                header("location: /pweb2/jobsheet5/mahasiswa");
             }else {
                 header("location:edit.php");
             }

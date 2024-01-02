@@ -1,20 +1,58 @@
-# buat home controller
 RewriteEngine On
 RewriteBase /pweb2/jobsheet5/
-
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^home/?$ index.php?page=$1 [L]
-
+#HOME
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1 [L]
+RewriteRule ^home/?$ index.php?page=$1 [L]
 
+#MAHASISWA
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^mahasiswa/?$ views/mahasiswa/index.php?page=$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^edit/(\d+)/?$ views/mahasiswa/edit.php?npm=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^tambah/?$ views/mahasiswa/tambah.php?page=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^proses_tambah/?$ views/mahasiswa/proses_tambah.php?page=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^hapus/(\d+)/?$ views/mahasiswa/hapus.php?id=$1 [L]
+
+#DOSEN
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^dosen/?$ views/dosen/index.php?page=$1 [L]
 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^edit_dsn/(\d+)/?$ views/dosen/edit.php?id=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^tambah_dsn/?$ views/dosen/tambah.php?page=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^proses_tambah_dsn/?$ views/dosen/proses_tambah.php?page=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^hapus_dsn/(\d+)/?$ views/dosen/hapus.php?id=$1 [L]
+
+#MATAKULIAH
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^matakuliah/?$ views/matakuliah/index.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]

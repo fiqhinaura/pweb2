@@ -26,7 +26,7 @@ if (isset($_GET['id'])){
             $result = $dosenController->updateDosen($id, $nidn, $nama, $prodi);
             
             if($result){
-                header("location:index.php");
+                header("location:/pweb2/jobsheet5/dosen");
             }else {
                 header("location:edit.php");
             }
