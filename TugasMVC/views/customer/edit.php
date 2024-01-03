@@ -2,7 +2,7 @@
 <?php
 
 include_once '../../config.php';
-include_once '../../controllers/DosenController.php';
+include_once '../../controllers/CustomerController.php';
 require '../../index.php';
 ?>
 <div class="col-sm-5 py-2 mx-auto">
@@ -11,19 +11,20 @@ require '../../index.php';
 $database = new database();
 $db = $database->getKoneksi();
 
-if (isset($_GET['id'])){
-    $id = $_GET['id'];
+if (isset($_GET['id_cst'])){
+    $id_cst = $_GET['id_cst'];
 
-    $dosenController = new DosenController($db);
-    $dosenData = $dosenController->getDosenById($id);
+    $customerController = new CustomerController($db);
+    $customerData = $customerController->getCustomerById($id_cst);
 
-    if ($dosenData){
+    if ($customerData){
         if (isset($_POST['submit'])){
-            $nidn = $_POST['nidn'];
-            $nama = $_POST['nama'];
-            $prodi = $_POST['prodi'];
+            $id_cst = $_POST['id_cst'];
+            $nama_cst = $_POST['nama_cst'];
+            $nohp_cst = $_POST['nohp_cst'];
+            $email_cst = $_POST['email_cst'];
 
-            $result = $dosenController->updateDosen($id, $nidn, $nama, $prodi);
+            $result = $customerController->updateCustomer($id_cst, $nama_cst, $nohp_cst, $email_cst);
             
             if($result){
                 header("location:index.php");
@@ -36,14 +37,14 @@ if (isset($_GET['id'])){
     }
 }
 ?>
-<h3>Edit Data Dosen</h3>
+<h3>Edit Data Customer</h3>
 <?php 
-if ($dosenData) {
+if ($customerData) {
 ?>
-<form action="" method="post">
+<form action="edit.php?id_cst=<?php echo $id_cst; ?>" method="post"> 
     <?php
     //perulangan untuk memanggil value di database
-    foreach ($dosenData as $d => $value){
+    foreach ($customerData as $d => $value){
         ?>
         <div class="mb-3">
         <table border="0">

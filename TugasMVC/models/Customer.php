@@ -1,6 +1,6 @@
 <?php
 
-class Dosen{
+class Customer{
     //membuat koneksi yang di config kita bikin private di class dosen
     private $koneksi;
 
@@ -9,34 +9,35 @@ class Dosen{
         $this->koneksi=$db;
     }
 
-    public function getAllDosen()
+    public function getAllCustomer()
     {
-        $query="SELECT * FROM dosen";
+        $query="SELECT * FROM customer";
         $result=mysqli_query($this->koneksi, $query);
         return $result;
     }
     
-    public function createDosen($id, $nidn, $nama, $prodi){
-        $query="INSERT INTO dosen (nidn, nama, prodi) 
-        VALUES('$nidn', '$nama', '$prodi')";
+    public function createCustomer($id_cst, $nama_cst, $nohp_cst, $email_cst){
+        $query="INSERT INTO customer (id_cst, nama_cst, nohp_cst, email_cst) 
+        VALUES('$id_cst', '$nama_cst', '$nohp_cst', '$email_cst')";
         $result=mysqli_query($this->koneksi, $query);
         if ($result){
             return true;
-        }else {
+        } else {
             return false;
         }
     }
+    
 
-    public function getDosenById($id)
+    public function getCustomerById($id_cst)
     {
-        $query = "SELECT * FROM dosen where id = $id";
+        $query = "SELECT * FROM customer where id_cst = $id_cst";
         $result = mysqli_query($this->koneksi, $query);
         return mysqli_fetch_assoc($result);
     }
 
-    public function updateDosen($id, $nidn, $nama, $prodi)
+    public function updateCustomer($id_cst, $nama_cst, $nohp_cst, $email_cst)
     {
-        $query = "UPDATE dosen set nidn='$nidn', nama='$nama', prodi='$prodi' where id='$id'";
+        $query = "UPDATE customer set id_cst='$id_cst', nama_cst='$nama_cst', nohp_cst='$nohp_cst', email_cst='$email_cst' where id_cst='$id_cst'";
         $result = mysqli_query($this->koneksi, $query);
         if ($result){
             return true;
@@ -45,8 +46,9 @@ class Dosen{
         }
     }
 
-    public function deleteDosen($id){
-        $query = "DELETE FROM dosen WHERE id=$id";
+    // Pada class Customer
+    public function deleteCustomer($id){
+        $query = "DELETE FROM customer WHERE id_cst=$id";
         $result = mysqli_query($this->koneksi, $query);
         
         if ($result){

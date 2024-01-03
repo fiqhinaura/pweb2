@@ -1,6 +1,6 @@
 <?php
 //pengatur data
-class Mahasiswa{
+class reservasi{
     //membuat koneksi yang di config kita bikin private di class mhs
     private $koneksi;
 
@@ -9,16 +9,16 @@ class Mahasiswa{
         $this->koneksi=$db;
     }
 
-    public function getAllMahasiswa()
+    public function getAllReservasi()
     {
-        $query="SELECT * FROM mahasiswa";
+        $query="SELECT r.*,c.nama_cst FROM `reservasi` r JOIN customer c ON c.id_cst=r.id_cst;";
         $result=mysqli_query($this->koneksi, $query);
         return $result;
     }
     
-    public function createMahasiswa($npm, $nama, $tempat_lahir, $jenis_kelamin, $agama, $alamat){
-        $query="INSERT INTO mahasiswa (npm, nama, tempat_lahir, jenis_kelamin, agama, alamat) 
-        VALUES('$npm', '$nama', '$tempat_lahir', '$jenis_kelamin', '$agama', '$alamat')";
+    public function createReservasi($id_reservasi, $id_cst, $checkin, $checkout, $jenis){
+        $query="INSERT INTO reservasi (id_reservasi, id_cst, checkin, checkout, jenis) 
+        VALUES('$id_reservasi', '$id_cst', '$checkin', '$checkout', '$jenis')";
         $result=mysqli_query($this->koneksi, $query);
         if ($result){
             return true;
@@ -27,16 +27,16 @@ class Mahasiswa{
         }
     }
 
-    public function getMahasiswaById($npm)
+    public function getReservasiById($id_reservasi)
     {
-        $query = "SELECT * FROM mahasiswa where npm = $npm";
+        $query = "SELECT * FROM reservasi where id_reservasi = $id_reservasi";
         $result = mysqli_query($this->koneksi, $query);
         return mysqli_fetch_assoc($result);
     }
 
-    public function updateMahasiswa($npm, $nama, $tempat_lahir, $jenis_kelamin, $agama, $alamat)
+    public function updateReservasi($id_reservasi, $id_cst, $checkin, $checkout, $jenis)
     {
-        $query = "UPDATE mahasiswa set nama='$nama', tempat_lahir='$tempat_lahir', jenis_kelamin='$jenis_kelamin', agama='$agama', alamat='$alamat' where npm='$npm'";
+        $query = "UPDATE reservasi set id_cst='$id_cst', checkin='$checkin', checkout='$checkout', jenis='$jenis' where id_reservasi='$id_reservasi'";
         $result = mysqli_query($this->koneksi, $query);
         if ($result){
             return true;
@@ -45,8 +45,8 @@ class Mahasiswa{
         }
     }
 
-    public function deleteMahasiswa($id){
-        $query = "DELETE FROM mahasiswa WHERE npm=$id";
+    public function deleteReservasi($id){
+        $query = "DELETE FROM reservasi WHERE id_reservasi=$id";
         $result = mysqli_query($this->koneksi, $query);
         
         if ($result){
