@@ -7,23 +7,23 @@ require '../../index.php';
 <form action="proses_tambah.php" method="post">
 <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">ID Customer</label>
-    <input type="text" class="form-control" name="id_cst" id="id_cst" aria-describedby="emailHelp">
+    <input type="text" class="form-control" name="id_cst" id="id_cst" aria-describedby="emailHelp" required>
     <div id="id_cst" class="form-text"></div>
   </div>
   <div class="mb-3">
       <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Nama</label>
-          <input type="text" class="form-control" name="nama_cst" id="nama_cst" aria-describedby="emailHelp">
+          <input type="text" class="form-control" name="nama_cst" id="nama_cst" aria-describedby="emailHelp" required>
           <div id="nama_cst" class="form-text"></div>
         </div>
-      <div class="mb-3">
+      <div class="mb-3"> 
           <label for="exampleInputEmail1" class="form-label">No. HP</label>
-          <input type="text" class="form-control" name="nohp_cst" id="nohp_cst" aria-describedby="emailHelp">
+          <input type="text" maxlength="13" class="form-control" name="nohp_cst" id="nohp_cst" aria-describedby="emailHelp" required>
           <div id="nohp_cst" class="form-text"></div>
         </div>
       <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email</label>
-          <input type="text" class="form-control" name="email_cst" id="email_cst" aria-describedby="emailHelp">
+          <input type="text" class="form-control" name="email_cst" id="email_cst" aria-describedby="emailHelp" required>
           <div id="email_cst" class="form-text"></div>
         </div>
   <!-- <div class="mb-3">
